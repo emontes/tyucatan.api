@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "Categories"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "color": {
+      "type": "string",
+      "required": true
+    },
+    "articles": {
+      "via": "category",
+      "collection": "article"
+    }
+  }
+}

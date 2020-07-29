@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "article"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "time": {
+      "required": false,
+      "type": "datetime"
+    },
+    "hometext": {
+      "type": "richtext"
+    },
+    "bodytext": {
+      "type": "richtext"
+    },
+    "category": {
+      "model": "categories",
+      "via": "articles"
+      
+    },
+    "topic": {
+      "via": "articles",
+      "model": "topic"
+      
+    },
+    "language": {
+      "type": "enumeration",
+      "enum": [
+        "spanish",
+        "english"
+      ],
+      "default": "spanish",
+      "required": true
+    }
+  }
+}
