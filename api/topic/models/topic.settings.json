@@ -31,9 +31,8 @@
       "type": "text"
     },
     "articles": {
-      "collection": "article",
-      "via": "topic"
+      "via": "topic",
+      "collection": "article"
     }
-    
   }
 }
