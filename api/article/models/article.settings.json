@@ -10,8 +10,7 @@
   },
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "time": {
       "required": false,
@@ -26,10 +25,12 @@
     "category": {
       "model": "categories",
       "via": "articles"
+      
     },
     "topic": {
-      "model": "topic",
-      "via": "articles"
+      "via": "articles",
+      "model": "topic"
+      
     },
     "language": {
       "type": "enumeration",
