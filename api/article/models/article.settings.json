@@ -25,12 +25,10 @@
     "category": {
       "model": "categories",
       "via": "articles"
-      
     },
     "topic": {
-      "via": "articles",
-      "model": "topic"
-      
+      "model": "topic",
+      "via": "articles"
     },
     "language": {
       "type": "enumeration",
@@ -40,6 +38,17 @@
       ],
       "default": "spanish",
       "required": true
+    },
+    "imagen": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
